@@ -7,29 +7,34 @@ trello:
 ---
 #  Camera-Based Monitoring, Automatic Tracking, and Route-Behaviour Analysis of Ant Colony Individuals
 
-This project develops and evaluates a camera-based system for tracking
-individual ants in recorded videos and analysing their movement. It
-compares an OpenCV-based detection and tracking pipeline with a machine
-learning-based pipeline using manually annotated reference data. The
-resulting trajectories support measurements of individual movement and
-colony-level spatial activity, including changes following a controlled
-route obstruction.
+This project develops an application that detects multiple real ants, assigns temporary identities to reliable track segments, and records their movement over time. The registered segments support route analysis and an estimate of relative pheromone-trail intensity without requiring permanent identity for every ant. Multiple cameras support clearer, more detailed observation of a two-dimensional environment. Two algorithms will be compared using manually verified recordings, including tracking accuracy and elapsed processing time.
 
 ## Objectives
-- **Primary objective:**  Track individual ants from video and analyse their movement.
-- **Target users / stakeholders:** Researchers studying ant behaviour.
-- **Measurable success criteria:** Compare two tracking methods against annotated videos and produce trajectories, movement statistics, and heatmaps.
-- **Constraints:** one fixed camera, offline processing, limited annotation time.
+- **Primary objective:** Track multiple ants simultaneously, save their paths, and estimate relative pheromone-trail intensity from the registered tracks.
+- **Target users / stakeholders:** Researchers studying ant movement and route usage.
+- **Measurable success criteria:** The application saves distinguishable tracks with timestamps and direction, displays an estimated trail-intensity map with observation coverage, identifies missing-data gaps, and reports a comparison of two algorithms.
+- **Constraints:** Real-ant observations; 2D analysis; limited annotation time; explicit uncertainty and missing-data handling.
 
 ## Scope
 
 ### In scope
 
-- Video collection, annotation, OpenCV and ML tracking, accuracy evaluation, and a before/after route-obstruction experiment.
+- Recorded video from one or multiple cameras for detailed 2D observation.
+- Detection, temporary track identities, and simultaneous tracking of multiple ants.
+- Saved tracks, travel direction, movement measurements, and route analysis.
+- Relative pheromone-trail intensity estimated from observed tracks.
+- Camera/time coverage, missing-data gaps, and prevention of duplicate counting in overlapping views.
+- Manually verified reference data and comparison of two algorithms, including wall-clock processing time.
 
 ### Out of scope
 
-- Multiple cameras, real-time monitoring, and Ant Colony Optimization simulation. (They can be good extentions to the project.)
+- Simulated ants, simulated colony behaviour, and Ant Colony Optimization simulation.
+- 3D reconstruction, physical marking, and automatic physical control of the colony.
+- Direct chemical measurement of pheromone concentration or independent biological causal validation.
+- Guaranteed permanent identity for every ant across the entire observation session.
 
 ## Notes
+
+Live monitoring and longer-term identity continuity are possible additions, to be decided after feasibility is assessed. The trail-intensity output is a movement-based estimate, with its assumptions and missing coverage made visible. Specific algorithms and the estimation calculation will be discussed later in the semester.
+
 
