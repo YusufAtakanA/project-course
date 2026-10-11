@@ -5,36 +5,35 @@ id: 2026-ST-04
 github: https://github.com/YusufAtakanA/project-course
 trello:
 ---
-#  Camera-Based Monitoring, Automatic Tracking, and Route-Behaviour Analysis of Ant Colony Individuals
+# Camera-Based Monitoring, Automatic Tracking, and Route-Behaviour Analysis of Ant Colony Individuals
 
-This project develops an application that detects multiple real ants, assigns temporary identities to reliable track segments, and records their movement over time. The registered segments support route analysis and an estimate of relative pheromone-trail intensity without requiring permanent identity for every ant. Multiple cameras support clearer, more detailed observation of a two-dimensional environment. Two algorithms will be compared using manually verified recordings, including tracking accuracy and elapsed processing time.
+Ants reinforce frequently used routes with pheromone signals, and this is central to how a colony coordinates its movement without central control. This project uses a multi-camera observation approach to monitor ant movement in a controlled ant farm. It identifies and tracks individual ants over time, reconstructs their movement trajectories, and uses the observed routes to estimate the spatial distribution and relative intensity of pheromone trails. The estimate is an indirect representation of chemical signaling activity, not a direct measurement of pheromone concentration. The project also investigates how reliable tracking and trajectory reconstruction are under different observation conditions, and compares alternative approaches by tracking accuracy and computational efficiency.
 
 ## Objectives
-- **Primary objective:** Track multiple ants simultaneously, save their paths, and estimate relative pheromone-trail intensity from the registered tracks.
-- **Target users / stakeholders:** Researchers studying ant movement and route usage.
-- **Measurable success criteria:** The application saves distinguishable tracks with timestamps and direction, displays an estimated trail-intensity map with observation coverage, identifies missing-data gaps, and reports a comparison of two algorithms.
-- **Constraints:** Real-ant observations; 2D analysis; limited annotation time; explicit uncertainty and missing-data handling.
+- **Primary objective:** Identify and track individual ants over time, reconstruct their movement trajectories, and use the observed routes to estimate the spatial distribution and relative intensity of pheromone trails.
+- **Target users / stakeholders:** Researchers studying ant behavior and swarm intelligence.
+- **Measurable success criteria:** Using multi-camera recordings of the ant farm, the system saves a trajectory for each tracked ant, shows the frequently used pathways and an estimated pheromone trail map, and reports the tracking accuracy and computational efficiency of two alternative approaches under different observation conditions.
+- **Constraints:** Real ants in a controlled ant farm; multi-camera observation in 2D; pheromone trails are estimated from movement, not measured chemically.
 
 ## Scope
 
 ### In scope
 
-- Recorded video from one or multiple cameras for detailed 2D observation.
-- Detection, temporary track identities, and simultaneous tracking of multiple ants.
-- Saved tracks, travel direction, movement measurements, and route analysis.
-- Relative pheromone-trail intensity estimated from observed tracks.
-- Camera/time coverage, missing-data gaps, and prevention of duplicate counting in overlapping views.
-- Manually verified reference data and comparison of two algorithms, including wall-clock processing time.
+- Multi-camera observation of ant movement in a controlled ant farm.
+- Identifying and tracking individual ants over time and reconstructing their movement trajectories.
+- Analysis of movement frequency, direction, and temporal patterns to identify frequently used pathways.
+- Estimation of the spatial distribution and relative intensity of pheromone trails from the observed routes.
+- Investigation of how collective movement may contribute to trail formation and reinforcement.
+- Reliability of tracking and trajectory reconstruction under different observation conditions.
+- Comparison of alternative approaches by tracking accuracy and computational efficiency, to assess their suitability for continuous behavioral observation.
 
 ### Out of scope
 
-- Simulated ants, simulated colony behaviour, and Ant Colony Optimization simulation.
-- 3D reconstruction, physical marking, and automatic physical control of the colony.
-- Direct chemical measurement of pheromone concentration or independent biological causal validation.
-- Guaranteed permanent identity for every ant across the entire observation session.
+- Direct chemical measurement of pheromone concentration.
+- Simulated ants or simulated colony behavior.
+- 3D reconstruction and physical marking of ants.
+- Building a computational swarm-intelligence model; the findings may support such work later.
 
 ## Notes
 
-Live monitoring and longer-term identity continuity are possible additions, to be decided after feasibility is assessed. The trail-intensity output is a movement-based estimate, with its assumptions and missing coverage made visible. Specific algorithms and the estimation calculation will be discussed later in the semester.
-
-
+ The algorithms, the pheromone estimation calculation, and the technical design are decided in the second half of the semester.
