@@ -26,7 +26,7 @@ Project ID: 2026-ST-04
 - Ant **movement** can be seen.
 
 <!-- @callout question -->
-> Can we track ants in an ant farm and estimate the pheromone trails from their routes?
+> Can we track ants in an ant farm and estimate the pheromone trails from their routes? And can we predict the path an ant will take next?
 
 ---
 
