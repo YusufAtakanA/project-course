@@ -2,6 +2,7 @@
 project_outline: "[[00-project/01-project-outline]]"
 ---
 
+
 <!-- @slide Title -->
 
 <!-- 5xl -->
@@ -15,11 +16,11 @@ Project ID: 2026-ST-04
 ---
 
 <!-- @slide Problem -->
+<!-- @layout AAB -->
 
 ## Problem
 
 <!-- @set-align left -->
-<!-- @set-width 70% -->
 
 - Ants mark the routes they use often with **pheromone**. This is central to how a colony coordinates its movement without a leader.
 - Pheromone trails **cannot be seen** in a video.
@@ -27,6 +28,12 @@ Project ID: 2026-ST-04
 
 <!-- @callout question -->
 > Can we track ants in an ant farm and estimate the pheromone trails from their routes? And can we predict the path an ant will take next?
+
+***
+
+<!-- @contain -->
+
+![Ant trails branching from the nest towards the food](images/trails.png)
 
 ---
 
@@ -135,11 +142,11 @@ Four screens, three journeys.
 ---
 
 <!-- @slide Journey 1 -->
+<!-- @layout AAB -->
 
 ### Journey 1: Track the ants
 
 <!-- @set-align left -->
-<!-- @set-width 70% -->
 
 1. Add the camera recordings of one session.
 2. The system joins the camera views into one 2D map.
@@ -147,14 +154,20 @@ Four screens, three journeys.
 4. Each trajectory is saved as positions with timestamps.
 5. The researcher reviews the trajectories on the map.
 
+***
+
+<!-- @contain -->
+
+![Virtual IDs: each dot is one ant in one frame; a lost ant returns with a new ID](images/tracking.png)
+
 ---
 
 <!-- @slide Journey 2 -->
+<!-- @layout AAB -->
 
 ### Journey 2: Pathways, trails, and prediction
 
 <!-- @set-align left -->
-<!-- @set-width 70% -->
 
 1. Select a time interval.
 2. See how often and in which direction each area was traveled.
@@ -164,6 +177,12 @@ Four screens, three journeys.
 
 <!-- @note -->
 > **Prediction:** uses only the trails estimated up to the selected time. At the start of a session there are no trails yet, so no path is predicted.
+
+***
+
+<!-- @contain -->
+
+![Estimated trail map with a predicted path next to the actual trajectory](images/trail-map.png)
 
 ---
 
