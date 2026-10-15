@@ -3,7 +3,7 @@ name: Yusuf Atakan AKYUZ
 neptun: OKG649
 id: 2026-ST-04
 github: https://github.com/YusufAtakanA/project-course
-trello:
+github_project: https://github.com/users/YusufAtakanA/projects/2
 ---
 # Camera-Based Monitoring, Automatic Tracking, and Route-Behaviour Analysis of Ant Colony Individuals
 
